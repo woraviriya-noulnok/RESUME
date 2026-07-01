@@ -84,3 +84,28 @@ text-align: center;
 line-height: 40px;
 text-decoration: none;
 }
+/* รองรับหน้าจอที่มีขนาดความกว้างไม่เกิน 768px (มือถือและแท็บเล็ต) */
+@media (max-width: 768px) {
+    /* 1. ปรับส่วนหัวให้เมนูตกลงมาอยู่ใต้โลโก้ */
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* 2. ปรับเนื้อหาหลักและแถบด้านข้างให้เรียงซ้อนกันเป็นแนวตั้ง */
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    /* 3. ปรับการ์ดบทความทั้ง 3 ใบให้เรียงซ้อนกัน */
+    main {
+        flex-direction: column;
+    }
+
+    /* 4. ปรับส่วนท้ายเว็บให้เรียงเป็นแนวตั้งตรงกลาง */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
